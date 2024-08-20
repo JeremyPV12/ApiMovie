@@ -12,11 +12,14 @@ async function getMovie(){
     let getValue12 = document.querySelector('#searchMovie').value 
     let apiKey = '4c619ab635f5eb1da19eb8d7624130ad'
     
-    let contentMain = document.querySelector('.contentMain')
-    contentMain.innerHTML = ''
+    
 
     const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${getValue12}`)
     const responseInfo = await response.json();
+
+    let contentMain = document.querySelector('.contentMain')
+    contentMain.innerHTML = ''
+    
 
     /* console.log(responseInfo.results.length) */
     if (responseInfo.results.length === 0 ) {
@@ -24,10 +27,13 @@ async function getMovie(){
         contentMain.innerHTML='Movie not found'
     }
 
+
     const responsePicture = `https://image.tmdb.org/t/p/original`
     const responsemore = responseInfo.results
 
     responsemore.forEach(element => {
+
+        
 
         const divFather = document.createElement('div')
 
