@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.imageStyle{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.name{
+    color: brown    ;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.date{
+    color: cadetblue;
+    font-size: 1.3rem;
+    font-weight: 550;
+}
+
+.popularity{
+    display: flex;
+    justify-content: center;
+    background-color: lightslategray;
+    padding: 1px 1px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 4rem;
+    border-radius: 0.5rem;
+    
+}
+
+.overview{
+   /*  color: red; */
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.divDaughter{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
